@@ -6,6 +6,9 @@ fun main(args: Array<String>) {
     exercise3()
     exercise4()
     exercise5()
+    exercise6()
+    exercise7()
+    exercise8()
 }
 
 fun exercise1() {
@@ -106,8 +109,48 @@ fun decode(msg: String): String {
 
 fun exercise5() {
     println(filterEvens((1..10).toList()))
+    println()
 }
 
 fun filterEvens(list: List<Int>) = list.filter {
     it % 2 == 0
+}
+
+fun exercise6() {
+    val intArray = (1..10).toList()
+    println("The original array: $intArray")
+    println("Doubled with map(): ${intArray.map { it * 2 }}")
+    val daysOfWeek = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    println("Days of week uppercase: ${daysOfWeek.map { it.uppercase() }}")
+    println("First letter of the week days: ${daysOfWeek.map { it[0].lowercase() }}")
+    println("Length of each day of the week: ${daysOfWeek.map { it.length }}")
+    println("Average day length: ${daysOfWeek.map { it.length }.average()}\n")
+}
+
+fun exercise7() {
+    val daysOfWeek = mutableListOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+    daysOfWeek.removeIf { it.contains('n') }
+    println("Days of week without letter 'n': $daysOfWeek")
+    daysOfWeek.withIndex().forEach{
+        println("Item at ${it.index} is ${it.value}")
+    }
+    daysOfWeek.sort()
+    println("Days of week sorted: $daysOfWeek\n")
+}
+
+fun exercise8() {
+    val randomInts = IntArray(10) {
+        Random().nextInt(101 - 0) + 0
+    }.asList()
+    println("Random array:")
+    randomInts.forEach{
+        println(it)
+    }
+    println("Sorted array: ${randomInts.sorted()}")
+    println("Does the array contain an even number? ${randomInts.any { it % 2 == 0 }}")
+    println("Does the array contain only even numbers? ${randomInts.all { it % 2 == 0 }}")
+    var sum = 0.0
+    randomInts.forEach { sum += it }
+    println("Average of the numbers: ${sum / randomInts.size }")
+    //I don't know if this is the way how it should've been solved, but I couldn't quite understand the requirement.
 }
