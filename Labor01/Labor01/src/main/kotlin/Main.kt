@@ -153,4 +153,5 @@ fun exercise8() {
     randomInts.forEach { sum += it }
     println("Average of the numbers: ${sum / randomInts.size }")
     //I don't know if this is the way how it should've been solved, but I couldn't quite understand the requirement.
+
 }
