@@ -2,13 +2,13 @@ class ItemController(private val itemService: ItemService) {
     fun quiz(count: Int) {
         var correctAnswers = 0
         val listOfQuestions = itemService.selectRandomItems(count)
-        for (i in 0 until count) {
-            println("Question: ${listOfQuestions[i].question}")
-            for(j in 0 until listOfQuestions[i].answers.size) {
-                println("\t${j + 1}. ${listOfQuestions[i].answers[j]}")
+        listOfQuestions.forEach {
+            println("Question: ${it.question}")
+            it.answers.forEachIndexed { index, element ->
+                println("\t${index + 1}. $element")
             }
             val answer = readLine()?.toInt()?.minus(1)
-            if(listOfQuestions[i].answers[answer!!] == listOfQuestions[i].answers[listOfQuestions[i].correct]) {
+            if(it.answers[answer!!] == it.answers[it.correct]) {
                 ++correctAnswers
             }
         }
