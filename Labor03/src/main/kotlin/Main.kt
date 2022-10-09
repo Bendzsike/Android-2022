@@ -1,4 +1,4 @@
 fun main() {
     val itemController = ItemController(ItemService(ItemRepository()))
-    itemController.quiz(6)
+    itemController.quiz(ItemRepository().size())
 }
