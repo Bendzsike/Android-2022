@@ -8,7 +8,9 @@ class ItemController(private val itemService: ItemService) {
                 println("\t${index + 1}. $element")
             }
             val answer = readLine()?.toInt()?.minus(1)
-            if(it.answers[answer!!] == it.answers[it.correct]) {
+            if (answer == null || answer >= it.answers.size) {
+                println("Incorrect choice!")
+            } else if(it.answers[answer] == it.answers[it.correct]) {
                 ++correctAnswers
             }
         }
