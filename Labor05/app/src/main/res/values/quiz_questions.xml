@@ -1,0 +1,66 @@
+<resources>
+    <string name="question1">Does Kotlin use semicolons?</string>
+
+    <string-array name="question1_answers">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <integer name="question1_correct">2</integer>
+
+    <string name="question2">What is the difference between val and var in Kotlin?</string>
+
+    <string-array name="question2_answers">
+        <item>Variables declared with val can only access const members</item>
+        <item>var is scoped to the nearest function block and val is scoped to the nearest enclosing block</item>
+        <item>Variables declared with val are final, those with var are not</item>
+        <item>Variables declared with var are final, those with val are not</item>
+    </string-array>
+
+    <integer name="question2_correct">3</integer>
+
+    <string name="question3">What does a data class not offer?</string>
+
+    <string-array name="question3_answers">
+        <item>Auto-generated hashCode() and equals() methods</item>
+        <item>An auto-generated toString() method</item>
+        <item>A generated copy(..) method, to create copies of instances</item>
+        <item>Automatic conversion from/to JSON</item>
+    </string-array>
+
+    <integer name="question3_correct">4</integer>
+
+    <string name="question4">What does this code do? "foo()()"</string>
+
+    <string-array name="question4_answers">
+        <item>Calls a function which is returned by the chall of foo</item>
+        <item>creates two-dimensional array</item>
+        <item>Fails compilation</item>
+        <item>Calls foo asynchronously</item>
+    </string-array>
+
+    <integer name="question4_correct">1</integer>
+
+    <string name="question5">Which of these targets does Kotlin currently not support?</string>
+
+    <string-array name="question5_answers">
+        <item>LLVM</item>
+        <item>javaScript</item>
+        <item>JVM</item>
+        <item>.NET CLR</item>
+    </string-array>
+
+    <integer name="question5_correct">4</integer>
+
+    <string name="question6">What is the correct way to declare a variable of integer type in Kotlin?</string>
+
+    <string-array name="question6_answers">
+        <item>var i: Int = 42</item>
+        <item>int i = 42</item>
+        <item>var i : int = 42</item>
+        <item>let i = 42</item>
+    </string-array>
+
+    <integer name="question6_correct">1</integer>
+
+</resources>
