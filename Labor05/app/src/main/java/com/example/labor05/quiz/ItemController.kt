@@ -1,3 +1,5 @@
+import com.example.labor05.quiz.ItemService
+
 class ItemController(private val itemService: ItemService) {
     fun quiz(count: Int) {
         var correctAnswers = 0

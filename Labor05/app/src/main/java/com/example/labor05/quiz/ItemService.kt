@@ -1,3 +1,5 @@
+package com.example.labor05.quiz
+
 class ItemService(private val itemRepository: ItemRepository) {
     fun selectRandomItems(amount: Int): List<Item> {
         val result = mutableListOf<Item>()

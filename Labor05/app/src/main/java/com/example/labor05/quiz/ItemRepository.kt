@@ -1,11 +1,7 @@
-import androidx.compose.ui.res.stringArrayResource
-import androidx.compose.ui.res.stringResource
-import com.example.labor05.R
-import java.io.File
-import java.util.*
+package com.example.labor05.quiz
 
 class ItemRepository {
-    private val items = mutableListOf<Item>()
+    val items = mutableListOf<Item>()
 
     fun randomItem(): Item {
         return items[(0..5).random()]
