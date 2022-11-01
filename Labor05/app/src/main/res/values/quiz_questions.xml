@@ -30,7 +30,7 @@
 
     <integer name="question3_correct">4</integer>
 
-    <string name="question4">What does this code do? "foo()()"</string>
+    <string name="question4">What does this code do?\n\"foo()()\"</string>
 
     <string-array name="question4_answers">
         <item>Calls a function which is returned by the chall of foo</item>
