@@ -34,7 +34,7 @@
 
     <string-array name="question4_answers">
         <item>Calls a function which is returned by the chall of foo</item>
-        <item>creates two-dimensional array</item>
+        <item>Creates two-dimensional array</item>
         <item>Fails compilation</item>
         <item>Calls foo asynchronously</item>
     </string-array>
