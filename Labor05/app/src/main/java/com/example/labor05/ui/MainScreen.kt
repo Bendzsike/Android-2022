@@ -19,7 +19,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.labor05.Routes
+import com.example.labor05.navigation.Routes
 
 @Composable
 fun MainScreen(navController: NavController) {
