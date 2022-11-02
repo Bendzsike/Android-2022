@@ -1,4 +1,4 @@
-package com.example.labor05
+package com.example.labor05.navigation
 
 sealed class Routes(val route: String) {
     object MainScreen : Routes("MainScreen")
