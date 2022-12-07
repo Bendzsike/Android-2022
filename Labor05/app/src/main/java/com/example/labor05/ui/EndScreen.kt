@@ -1,4 +1,4 @@
-package com.example.labor05.ui
+package com.example.labor05.ui.quiztime
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button

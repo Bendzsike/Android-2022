@@ -9,9 +9,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.labor05.ui.EndScreen
-import com.example.labor05.ui.MainScreen
-import com.example.labor05.ui.QuestionScreen
+import com.example.labor05.ui.quiztime.EndScreen
+import com.example.labor05.ui.quiztime.MainScreen
+import com.example.labor05.ui.quiztime.QuestionScreen
 import com.example.labor05.utilities.questionListSetup
 
 @Composable
