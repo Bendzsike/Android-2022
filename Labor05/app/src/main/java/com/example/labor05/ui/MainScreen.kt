@@ -1,4 +1,4 @@
-package com.example.labor05.ui.quiztime
+package com.example.labor05.ui
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.*

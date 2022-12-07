@@ -1,7 +1,7 @@
 package com.example.labor05.quiz
 
 class ItemRepository {
-    val items = mutableListOf<Item>()
+    private val items = mutableListOf<Item>()
 
     fun randomItem(): Item {
         return items[(0..5).random()]
