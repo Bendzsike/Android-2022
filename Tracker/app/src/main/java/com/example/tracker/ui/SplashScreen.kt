@@ -37,7 +37,9 @@ fun SplashScreen(navController: NavController) {
     }
 
     //TODO: Check if logged in, if yes, redirect to HomePage
-    if(true) {
+    if(false) {
+
+    } else {
         navController.navigate(Routes.LoginScreen.route)
     }
 }

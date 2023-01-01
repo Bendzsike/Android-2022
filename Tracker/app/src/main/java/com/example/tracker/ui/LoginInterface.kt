@@ -103,12 +103,7 @@ fun LoginScreen(navController: NavController) {
                     ),
                     onClick = {
                         if (email == "") {
-                            Toast.makeText(
-                                context,
-                                "Please enter your e-mail!",
-                                Toast.LENGTH_SHORT
-                            )
-                                .show()
+                            Toast.makeText(context, "Please enter your e-mail!", Toast.LENGTH_SHORT).show()
                         } else {
                             //TODO: Actual login
                         }
