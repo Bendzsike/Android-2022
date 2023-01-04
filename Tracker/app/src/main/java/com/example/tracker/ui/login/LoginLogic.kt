@@ -24,7 +24,7 @@ fun login(email: String, password: String, sharedPreferences: SharedPreferences)
             val response = userRepo.loginUser(loginRequest = loginRequest)
             if (response?.isSuccessful == true) {
                 Log.d("LoginLogic", "Login response ${response.body()}")
-                saveData(response.body()!!.token, response.body()!!.deadline, sharedPreferences)
+                saveData(response.body()!!.userId, response.body()!!.token, response.body()!!.deadline, sharedPreferences)
                 loginResult.postValue(LoginResult.SUCCESS)
             } else {
                 Log.d("LoginLogic", "Login error response ${response?.errorBody()}")
@@ -38,8 +38,9 @@ fun login(email: String, password: String, sharedPreferences: SharedPreferences)
     }
 }
 
-fun saveData(token: String, deadline: Long, sharedPreferences: SharedPreferences) {
+fun saveData(userId: Int, token: String, deadline: Long, sharedPreferences: SharedPreferences) {
     val editor: SharedPreferences.Editor = sharedPreferences.edit()
+    editor.putInt("userId", userId)
     editor.putString("token", token)
     editor.putLong("deadline", deadline)
     editor.apply()

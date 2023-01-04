@@ -19,6 +19,9 @@ import androidx.navigation.NavController
 import com.example.tracker.R
 import com.example.tracker.navigation.Routes
 import com.example.tracker.repo.UserRepository
+import com.example.tracker.ui.groups.getDepartments
+import com.example.tracker.ui.myTasks.getMyTasks
+import com.example.tracker.ui.users.getAllUsers
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Dispatchers.IO
@@ -63,12 +66,17 @@ fun SplashScreen(navController: NavController, sharedPreferences: SharedPreferen
                     val response = userRepo.getCurrentUser(token)
                     if (response?.isSuccessful == true) {
                         withContext(Dispatchers.Main) {
+                            getMyTasks(token)
+                            getDepartments(token)
+                            getAllUsers(token)
                             navController.navigate(Routes.MyTasks.route)
                             hasNavigated = true
                         }
                     } else {
-                        navController.navigate(Routes.LoginScreen.route)
-                        hasNavigated = true
+                        withContext(Dispatchers.Main) {
+                            navController.navigate(Routes.LoginScreen.route)
+                            hasNavigated = true
+                        }
                     }
                 } catch (ex: Exception) {
                     Log.e("getCurrentUser", ex.message, ex)
